@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 import numpy as np
 
 # Load the Random Forest CLassifier model
-filename = 'diabetes-prediction-rfc-model.npz'
+filename = 'diabetes-prediction-rfc-model.pkl'
 model = np.load(filename)
 
 # Get the classifier
