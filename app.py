@@ -5,7 +5,7 @@ import numpy as np
 
 # Load the Random Forest CLassifier model
 with open('classifier.pkl', 'rb') as f:
-  classifier = pickle.load(f)
+    classifier = pickle.load(f)
 
 app = Flask(__name__)
 
