@@ -1,14 +1,11 @@
 # Importing essential libraries
 from flask import Flask, render_template, request
-# import pickle
+import pickle
 import numpy as np
 
 # Load the Random Forest CLassifier model
-filename = 'diabetes-prediction-rfc-model.pkl'
-model = np.load(filename)
-
-# Get the classifier
-classifier = model['classifier']
+with open('classifier.pkl', 'rb') as f:
+  classifier = pickle.load(f)
 
 app = Flask(__name__)
 
